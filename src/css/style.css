@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-ui: "Roboto", sans-serif;
+
+  /* Primary Colors */
+  --color-primary: #07484a;
+  --color-primary-dark: #063c3e;
+  --color-primary-deep: #053031;
+  --color-primary-darker: #042425;
+
+  /* Secondary Colors */
+  --color-secondary: #70908b;
+  --color-secondary-light: #9bbfbc;
+
+  /* Background */
+  --color-background: #fdfbf8;
+
+  /* Accent Colors */
+  --color-accent-green: #caf3e5;
+  --color-accent-mint: #e0f6f1;
+  --color-accent-blue: #e0eff6;
+  --color-accent-purple: #eeebff;
+  --color-accent-orange: #fff4e7;
+}
+html {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  font-family: var(--font-body);
+}
+.hero-bg {
+  background-image: url("../assets/images/Bac1.png");
+}
+
+@layer components {
+  .footer-link {
+    @apply relative inline-block pb-0.5 transition-colors duration-300 hover:text-secondary;
+  }
+
+  .footer-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300;
+  }
+
+  .footer-link:hover::after {
+    @apply scale-x-100;
+  }
+}

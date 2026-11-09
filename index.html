@@ -1,0 +1,1815 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Importing fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <!-- End importing fonts -->
+
+    <title>INWOOD</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="hero-bg relative min-h-[100vh] overflow-hidden bg-cover bg-center">
+
+        <!-- Overlay -->
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary-darker/40 via-primary-dark/40 to-transparent">
+        </div>
+        <!-- Navbar -->
+        <header id="site-header" data-scrolled="false"
+          class="group fixed inset-x-0 top-0 z-50">
+          <div aria-hidden="true"
+            class="pointer-events-none absolute inset-0 -z-10 bg-secondary/30 opacity-0 shadow-[0_5px_15px_-30px_rgba(0,0,0,0.35)] backdrop-blur-md transition-opacity duration-300 group-data-[scrolled=true]:opacity-100"></div>
+
+          <nav
+            class="mx-auto flex max-w-7xl items-center justify-between px-8 py-7 transition-[padding] duration-300 group-data-[scrolled=true]:py-4">
+
+            <!-- Logo -->
+            <a href="#home">
+              <img src="/src/assets/images/Logo.png" alt="INWOOD Logo"
+                class="h-11 w-auto" />
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul
+              class="hidden items-center gap-10 text-md font-heading text-white md:flex">
+              <li>
+                <a href="#home"
+                  class="inline-block transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 hover:text-secondary-light">Home</a>
+              </li>
+              <li>
+                <a href="#categories"
+                  class="inline-block transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 hover:text-secondary-light">Categories</a>
+              </li>
+              <li>
+                <a href="#popular-products"
+                  class="inline-block transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 hover:text-secondary-light">Products</a>
+              </li>
+              <li>
+                <a href="#footer"
+                  class="inline-block transition-all duration-300 ease-in-out hover:-translate-y-1 hover:scale-102 hover:text-secondary-light">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Desktop Header Icons -->
+            <div class="hidden items-center gap-10 md:flex">
+
+              <!-- Search -->
+
+              <a href="#categories" data-search-link aria-label="Search">
+                <img src="/src/assets/images/Icon_search.png" alt
+                  class="h-[21px] w-[21px] transition-transform duration-300 hover:-translate-y-1" />
+              </a>
+
+              <!-- Shopping Cart -->
+              <a href="#special-package" data-cart-link
+                aria-label="Shopping Cart"
+                class="relative block">
+                <img src="/src/assets/images/Icon_shop.png" alt
+                  class="h-[21px] w-[21px] transition-transform duration-300 hover:-translate-y-1" />
+                <span data-cart-count aria-hidden="true"
+                  class="pointer-events-none absolute -right-2.5 -top-2.5 grid h-4 min-w-[16px] scale-0 place-items-center rounded-full bg-secondary px-1 text-[10px] font-bold leading-none text-white opacity-0 transition-opacity duration-300">0</span>
+              </a>
+
+              <!-- User Account -->
+              <a href="#account" aria-label="Account">
+                <img
+                  src="/src/assets/images/Icon_account.png"
+                  alt
+                  class="h-[21px] w-[21px] transition-transform duration-300 hover:-translate-y-1" />
+              </a>
+
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="menu-btn"
+              type="button"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              class="text-3xl text-white md:hidden">
+              <img src="/src/assets/images/Icon-list.png"
+                alt="Menu Icon"
+                class="h-6 w-6" />
+            </button>
+
+          </nav>
+
+          <!-- Mobile Menu Overlay -->
+          <div
+            id="menu-overlay"
+            class="invisible fixed inset-0 z-40 bg-black/30 opacity-0 transition-opacity duration-500 ease-in-out md:hidden">
+          </div>
+
+          <!-- Mobile Sidebar -->
+          <aside
+            id="mobile-menu"
+            aria-label="Mobile navigation"
+            class="fixed right-0 top-0 z-50 h-screen w-72 translate-x-full overflow-y-auto bg-[#FDFBF8] px-8 py-10 shadow-2xl transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] md:hidden">
+
+            <!-- Close Button -->
+            <div class="flex justify-end">
+              <button
+                id="close-btn"
+                type="button"
+                aria-label="Close menu"
+                class="text-3xl text-primary transition-transform duration-300 hover:rotate-90">
+                &times;
+              </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <ul
+              class="mt-12 flex flex-col gap-8 text-base font-heading text-primary-darker">
+
+              <li>
+                <a href="#home"
+                  class="transition-colors duration-300 hover:text-secondary">Home</a>
+              </li>
+
+              <li>
+                <a href="#categories"
+                  class="transition-colors duration-300 hover:text-secondary">categories</a>
+              </li>
+
+              <li>
+                <a href="#popular-products"
+                  class="transition-colors duration-300 hover:text-secondary">Products</a>
+              </li>
+
+              <li>
+                <a href="#footer"
+                  class="transition-colors duration-300 hover:text-secondary">Contact</a>
+              </li>
+
+            </ul>
+
+            <!-- Divider -->
+            <div class="my-10 border-t border-primary/15"></div>
+
+            <!-- Mobile Header Icons -->
+            <div class="flex items-center gap-10">
+
+              <!-- Search -->
+              <a href="#categories" aria-label="Search">
+                <img
+                  src="/src/assets/images/Icon_search.png"
+                  alt
+                  class="h-[21px] w-[21px] transition-transform duration-300 hover:-translate-y-1" />
+              </a>
+
+              <!-- Shopping Cart -->
+              <a href="#special-package" aria-label="Shopping Cart">
+                <img
+                  src="/src/assets/images/Icon_shop.png"
+                  alt
+                  class="h-[21px] w-[21px] transition-transform duration-300 hover:-translate-y-1" />
+              </a>
+
+              <!-- User Account -->
+              <a href="#account" aria-label="Account">
+                <img
+                  src="/src/assets/images/Icon_account.png"
+                  alt
+                  class="h-[21px] w-[21px] transition-transform duration-300 hover:-translate-y-1" />
+              </a>
+
+            </div>
+
+          </aside>
+        </header>
+
+        <!-- Hero Content -->
+        <div
+          class="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl items-center px-8 pt-24">
+          <div class="max-w-xl mt-18">
+
+            <h1
+              class="mt-3 font-heading text-4xl font-bold leading-tight text-primary md:text-5xl lg:text-6xl">
+              Exclusive Deals of
+              Furniture Collection
+
+            </h1>
+
+            <p
+              class="mt-6 max-w-md text-base leading-8 text-white/80 md:text-lg">
+              Explore different categories. Find the best deals.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-4">
+
+              <a
+                href="#categories"
+                class="border rounded-[7px] bg-secondary border-secondary px-7 py-3 text-sm font-semibold text-white transition hover:bg-white hover:border-white hover:text-primary">
+                Shop Now
+              </a>
+
+            </div>
+
+            <div
+              class="mt-14 flex items-center gap-10 border-t border-white/20 pt-7">
+
+              <div>
+                <p class="font-heading text-3xl font-bold text-white">250+</p>
+                <p class="mt-1 text-xs text-white/70">Products</p>
+              </div>
+
+              <div>
+                <p class="font-heading text-3xl font-bold text-white">100%</p>
+                <p class="mt-1 text-xs text-white/70">Quality</p>
+              </div>
+
+              <div>
+                <p class="font-heading text-3xl font-bold text-white">24/7</p>
+                <p class="mt-1 text-xs text-white/70">Support</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Explore by Category Section -->
+      <section id="categories" class="bg-[#FFFDF9] px-6 py-20 md:px-10 lg:py-24"
+        aria-labelledby="categories-title">
+        <div class="mx-auto max-w-7xl">
+
+          <h2 id="categories-title"
+            class="mb-12 text-center font-heading text-3xl font-bold text-primary md:text-4xl">
+            Explore by Category
+          </h2>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-[220px_1fr]">
+
+            <!-- Sidebar -->
+            <aside class="flex min-h-0 flex-col md:h-[520px]">
+
+              <!-- Search -->
+              <div
+                class="mb-5 flex items-center gap-3 rounded-md bg-[#F0F0F0] px-4 py-3 transition focus-within:ring-2 focus-within:ring-primary/30 md:mb-8">
+                <svg viewBox="0 0 24 24"
+                  class="h-4 w-4 shrink-0 fill-none stroke-primary/60"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true"><circle cx="11"
+                    cy="11" r="6.5" /><path d="M16 16l4.5 4.5" /></svg>
+                <label for="category-search" class="sr-only">Search
+                  categories</label>
+                <input id="category-search" type="search" placeholder="Search"
+                  autocomplete="off"
+                  class="w-full bg-transparent text-sm text-primary outline-none placeholder:text-[#6E757E]" />
+              </div>
+
+              <!-- List + vertical rail -->
+              <div class="flex min-h-0 flex-1 gap-3">
+
+                <ul id="category-list" data-lenis-prevent
+                  class="-mx-1 flex min-w-0 flex-1 gap-2 overflow-x-auto px-1 pb-2 [scrollbar-width:none] md:mx-0 md:flex-col md:gap-1 md:overflow-x-hidden md:overflow-y-auto md:overscroll-contain md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden">
+
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Bedroom"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Bedroom</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Dining Room"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Dining
+                      Room</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Meeting Room"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Meeting
+                      Room</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Workspace"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Workspace</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Living Room"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Living
+                      Room</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Kitchen"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Kitchen</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Living Space"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Living
+                      Space</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Bathroom"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Bathroom</button>
+                  </li>
+                  <li class="shrink-0 md:shrink">
+                    <button type="button" data-filter="Outdoor"
+                      aria-pressed="false" data-active="false"
+                      class="category-filter relative whitespace-nowrap rounded-full bg-[#F0F0F0] px-4 py-2 text-sm text-primary transition-colors duration-300 data-[active=true]:bg-primary data-[active=true]:text-white md:w-full md:rounded-none md:bg-transparent md:px-3 md:py-3 md:text-left md:hover:bg-[#F0F0F0] md:data-[active=true]:bg-transparent md:data-[active=true]:font-bold md:data-[active=true]:text-primary md:before:absolute md:before:left-0 md:before:top-1/2 md:before:h-4 md:before:w-0.5 md:before:-translate-y-1/2 md:before:rounded md:before:bg-primary md:before:opacity-0 md:before:transition-opacity md:data-[active=true]:before:opacity-100">Outdoor</button>
+                  </li>
+                </ul>
+
+                <!-- Vertical progress + arrows (desktop only) -->
+                <div
+                  class="hidden w-6 shrink-0 flex-col items-center gap-3 md:flex">
+                  <div id="category-progress-track"
+                    class="relative w-[2px] flex-1 cursor-pointer rounded-full bg-primary/15 before:absolute before:inset-y-0 before:-inset-x-3">
+                    <div id="category-progress-thumb"
+                      class="absolute left-0 top-0 h-1/3 w-full rounded-full bg-primary"></div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <button id="category-up" type="button"
+                      aria-label="Scroll categories up"
+                      class="grid h-6 w-6 place-items-center rounded-full bg-[#E0EFF6] text-primary transition hover:bg-primary hover:text-white disabled:cursor-default disabled:opacity-40 disabled:hover:bg-[#E0EFF6] disabled:hover:text-primary">
+                      <svg viewBox="0 0 24 24"
+                        class="h-3 w-3 fill-none stroke-current"
+                        stroke-width="2.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true"><path
+                          d="M5 15l7-7 7 7" /></svg>
+                    </button>
+                    <button id="category-down" type="button"
+                      aria-label="Scroll categories down"
+                      class="grid h-6 w-6 place-items-center rounded-full bg-[#F8D8D8] text-primary transition hover:bg-primary hover:text-white disabled:cursor-default disabled:opacity-40 disabled:hover:bg-[#F8D8D8] disabled:hover:text-primary">
+                      <svg viewBox="0 0 24 24"
+                        class="h-3 w-3 fill-none stroke-current"
+                        stroke-width="2.6" stroke-linecap="round"
+                        stroke-linejoin="round" aria-hidden="true"><path
+                          d="M5 9l7 7 7-7" /></svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- All Categories -->
+              <button id="all-categories" type="button"
+                class="group mt-5 flex w-fit items-center gap-3 rounded-md bg-[#6B8F89] px-7 py-4 text-xs font-semibold text-white transition duration-300 hover:bg-primary active:scale-95 md:mt-8">
+                All Categories
+                <svg viewBox="0 0 24 24"
+                  class="h-4 w-4 fill-none stroke-current transition-transform duration-300 group-hover:translate-x-1"
+                  stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true"><path
+                    d="M4 12h16M14 6l6 6-6 6" /></svg>
+              </button>
+
+            </aside>
+
+            <!-- Category Cards -->
+            <div id="category-grid" data-lenis-prevent
+              class="grid grid-cols-1 content-start gap-4 sm:grid-cols-2 lg:grid-cols-3 md:h-[520px] md:overflow-y-auto md:overscroll-contain md:[scrollbar-width:none] md:[&::-webkit-scrollbar]:hidden">
+
+              <!-- Bedroom -->
+              <article data-category="Bedroom"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/bedroom.png"
+                  alt="Bedroom furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Bedroom</h3>
+                    <a href="#bedroom"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Dining Room -->
+              <article data-category="Dining Room"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/dining-room.png"
+                  alt="Dining room furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Dining
+                      Room</h3>
+                    <a href="#dining-room"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Meeting Room -->
+              <article data-category="Meeting Room"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/meeting-room.png"
+                  alt="Meeting room furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Meeting
+                      Room</h3>
+                    <a href="#meeting-room"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Workspace -->
+              <article data-category="Workspace"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/workspace.png"
+                  alt="Workspace furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Workspace</h3>
+                    <a href="#workspace"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Living Room -->
+              <article data-category="Living Room"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/living-space.png"
+                  alt="Living room furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Living
+                      Room</h3>
+                    <a href="#living-room"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Kitchen -->
+              <article data-category="Kitchen"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/kitchen2x.jpg"
+                  alt="Kitchen furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Kitchen</h3>
+                    <a href="#kitchen"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Living Space -->
+              <article data-category="Living Space"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/living-space.png"
+                  alt="Living space furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Living
+                      Space</h3>
+                    <a href="#living-space"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Bathroom -->
+              <article data-category="Bathroom"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/bathroom@2x.jpg"
+                  alt="Bathroom furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Bathroom</h3>
+                    <a href="#bathroom"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Outdoor -->
+              <article data-category="Outdoor"
+                class="category-card group relative h-64 overflow-hidden rounded-md bg-[#D9D9D9]">
+                <img
+                  src="src/assets/images/outdoor@2x.jpg"
+                  alt="Outdoor furniture" loading="lazy" draggable="false"
+                  class="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
+                <div
+                  class="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition duration-500 group-hover:opacity-100 group-focus-within:opacity-100 [@media(hover:none)]:opacity-100">
+                  <div
+                    class="flex translate-y-3 flex-col items-center transition duration-500 group-hover:translate-y-0 group-focus-within:translate-y-0 [@media(hover:none)]:translate-y-0">
+                    <h3
+                      class="px-3 text-center font-heading text-2xl text-white xl:text-3xl">Outdoor</h3>
+                    <a href="#outdoor"
+                      class="mt-5 rounded-sm bg-[#E0EFF6] px-6 py-2 text-xs text-primary transition hover:bg-white">Explore</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- No Results -->
+              <p id="no-results" role="status"
+                class="col-span-full hidden py-16 text-center text-sm text-primary/70">
+                No categories found.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Products Section -->
+      <section id="popular-products"
+        class="relative overflow-hidden bg-white py-16 md:py-20"
+        aria-labelledby="popular-products-title">
+
+        <!-- Decorative Sofa Background -->
+        <div
+          class="pointer-events-none absolute left-0 top-0 z-0 h-full">
+          <img src="src/assets/images/bac2.png" alt
+            class="h-full w-full object-contain object-left" />
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-5 md:px-8">
+
+          <h2 id="popular-products-title"
+            class="mb-10 text-center font-heading text-3xl font-bold text-primary md:mb-12 md:text-4xl">
+            Popular Products
+          </h2>
+
+          <!-- Products Slider -->
+          <div id="products-slider" tabindex="0" role="region"
+            aria-label="Popular products"
+            class="flex cursor-grab snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4 pt-1 outline-none [scrollbar-width:none] focus-visible:ring-2 focus-visible:ring-primary/40 md:gap-6 [&::-webkit-scrollbar]:hidden">
+
+            <!-- Armchair -->
+            <article
+              class="product-card group relative w-[230px] shrink-0 snap-start rounded-2xl bg-[#CAF3E5] p-5 transition-shadow duration-300 hover:shadow-xl md:w-[270px] md:p-6">
+              <div class="absolute right-3 top-3 z-10 flex flex-col gap-2">
+                <button type="button" data-action="wishlist"
+                  aria-pressed="false" aria-label="Add Armchair to wishlist"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100 [&[aria-pressed=true]]:translate-x-0 [&[aria-pressed=true]]:opacity-100 [&[aria-pressed=true]]:text-rose-500 [&[aria-pressed=true]_svg]:fill-current">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z" /></svg>
+                </button>
+                <button type="button" data-action="cart"
+                  aria-label="Add Armchair to cart"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current"
+                    stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 016 0v2" /></svg>
+                </button>
+              </div>
+              <div
+                class="flex h-[160px] items-center justify-center md:h-[190px]">
+                <img src="src/assets/images/chir1.png" alt="Armchair"
+                  draggable="false"
+                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110" />
+              </div>
+              <div class="mt-5">
+                <h3
+                  class="product-name font-heading text-base font-semibold text-primary">Armchair</h3>
+                <p class="mt-1 text-xs text-primary/60">Light single chair</p>
+                <p class="mt-3 text-sm font-bold text-primary">$145</p>
+              </div>
+            </article>
+
+            <!-- Premium Sofa -->
+            <article
+              class="product-card group relative w-[230px] shrink-0 snap-start rounded-2xl bg-[#E0EFF6] p-5 transition-shadow duration-300 hover:shadow-xl md:w-[270px] md:p-6">
+              <div class="absolute right-3 top-3 z-10 flex flex-col gap-2">
+                <button type="button" data-action="wishlist"
+                  aria-pressed="false" aria-label="Add Premium Sofa to wishlist"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100 [&[aria-pressed=true]]:translate-x-0 [&[aria-pressed=true]]:opacity-100 [&[aria-pressed=true]]:text-rose-500 [&[aria-pressed=true]_svg]:fill-current">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z" /></svg>
+                </button>
+                <button type="button" data-action="cart"
+                  aria-label="Add Premium Sofa to cart"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 016 0v2" /></svg>
+                </button>
+              </div>
+              <div
+                class="flex h-[160px] items-center justify-center md:h-[190px]">
+                <img src="src/assets/images/chair 2.png" alt="Premium Sofa"
+                  draggable="false"
+                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110" />
+              </div>
+              <div class="mt-5">
+                <h3
+                  class="product-name font-heading text-base font-semibold text-primary">Premium
+                  Sofa</h3>
+                <p class="mt-1 text-xs text-primary/60">Light single chair</p>
+                <p class="mt-3 text-sm font-bold text-primary">$145</p>
+              </div>
+            </article>
+
+            <!-- Minimal Sofa -->
+            <article
+              class="product-card group relative w-[230px] shrink-0 snap-start rounded-2xl bg-[#EEEBFF] p-5 transition-shadow duration-300 hover:shadow-xl md:w-[270px] md:p-6">
+              <div class="absolute right-3 top-3 z-10 flex flex-col gap-2">
+                <button type="button" data-action="wishlist"
+                  aria-pressed="false" aria-label="Add Minimal Sofa to wishlist"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100 [&[aria-pressed=true]]:translate-x-0 [&[aria-pressed=true]]:opacity-100 [&[aria-pressed=true]]:text-rose-500 [&[aria-pressed=true]_svg]:fill-current">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z" /></svg>
+                </button>
+                <button type="button" data-action="cart"
+                  aria-label="Add Minimal Sofa to cart"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 016 0v2" /></svg>
+                </button>
+              </div>
+              <div
+                class="flex h-[160px] items-center justify-center md:h-[190px]">
+                <img src="src/assets/images/chair3.png"
+                  alt="Minimal Sofa" draggable="false"
+                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110" />
+              </div>
+              <div class="mt-5">
+                <h3
+                  class="product-name font-heading text-base font-semibold text-primary">Minimal
+                  Sofa</h3>
+                <p class="mt-1 text-xs text-primary/60">Light single chair</p>
+                <p class="mt-3 text-sm font-bold text-primary">$145</p>
+              </div>
+            </article>
+
+            <!-- Dining Chair -->
+            <article
+              class="product-card group relative w-[230px] shrink-0 snap-start rounded-2xl bg-[#FFF4E7] p-5 transition-shadow duration-300 hover:shadow-xl md:w-[270px] md:p-6">
+              <div class="absolute right-3 top-3 z-10 flex flex-col gap-2">
+                <button type="button" data-action="wishlist"
+                  aria-pressed="false" aria-label="Add Dining Chair to wishlist"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100 [&[aria-pressed=true]]:translate-x-0 [&[aria-pressed=true]]:opacity-100 [&[aria-pressed=true]]:text-rose-500 [&[aria-pressed=true]_svg]:fill-current">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z" /></svg>
+                </button>
+                <button type="button" data-action="cart"
+                  aria-label="Add Dining Chair to cart"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 016 0v2" /></svg>
+                </button>
+              </div>
+              <div
+                class="flex h-[160px] items-center justify-center md:h-[190px]">
+                <img src="src/assets/images/chair4.png"
+                  alt="Dining Chair" draggable="false"
+                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110" />
+              </div>
+              <div class="mt-5">
+                <h3
+                  class="product-name font-heading text-base font-semibold text-primary">Dining
+                  Chair</h3>
+                <p class="mt-1 text-xs text-primary/60">Dining Room / Chair</p>
+                <p class="mt-3 text-sm font-bold text-primary">$145</p>
+              </div>
+            </article>
+
+            <!-- Modern Armchair -->
+            <article
+              class="product-card group relative w-[230px] shrink-0 snap-start rounded-2xl bg-[#CAF3E5] p-5 transition-shadow duration-300 hover:shadow-xl md:w-[270px] md:p-6">
+              <div class="absolute right-3 top-3 z-10 flex flex-col gap-2">
+                <button type="button" data-action="wishlist"
+                  aria-pressed="false"
+                  aria-label="Add Modern Armchair to wishlist"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100 [&[aria-pressed=true]]:translate-x-0 [&[aria-pressed=true]]:opacity-100 [&[aria-pressed=true]]:text-rose-500 [&[aria-pressed=true]_svg]:fill-current">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M12 21s-8-5.2-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 5.8-8 11-8 11z" /></svg>
+                </button>
+                <button type="button" data-action="cart"
+                  aria-label="Add Modern Armchair to cart"
+                  class="flex h-8 w-8 items-center justify-center rounded-full bg-white/80 text-primary opacity-0 translate-x-2 transition duration-300 hover:bg-white group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:translate-x-0 group-focus-within:opacity-100 [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true"><path
+                      d="M5 8h14l-1 12H6L5 8zM9 8V6a3 3 0 016 0v2" /></svg>
+                </button>
+              </div>
+              <div
+                class="flex h-[160px] items-center justify-center md:h-[190px]">
+                <img src="src/assets/images/chir1.png" alt="Modern Armchair"
+                  draggable="false"
+                  class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110" />
+              </div>
+              <div class="mt-5">
+                <h3
+                  class="product-name font-heading text-base font-semibold text-primary">Modern
+                  Armchair</h3>
+                <p class="mt-1 text-xs text-primary/60">Modern furniture</p>
+                <p class="mt-3 text-sm font-bold text-primary">$168</p>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Progress + Controls -->
+          <div class="mt-4 flex items-center gap-6">
+
+            <div id="products-progress-track"
+              class="relative h-[3px] flex-1 cursor-pointer rounded-full bg-primary/20 before:absolute before:inset-x-0 before:-inset-y-3 before:content-['']">
+              <div id="products-progress-thumb"
+                class="absolute left-0 top-0 h-full w-1/4 rounded-full bg-primary transition-[left,width] duration-150"></div>
+            </div>
+
+            <div class="flex gap-3">
+              <button id="products-prev" type="button"
+                aria-label="Previous products"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-[#E0EFF6] text-primary transition hover:bg-primary hover:text-white disabled:cursor-default disabled:opacity-40 disabled:hover:bg-[#E0EFF6] disabled:hover:text-primary">
+                <svg viewBox="0 0 24 24"
+                  class="h-4 w-4 fill-none stroke-current" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+              </button>
+              <button id="products-next" type="button"
+                aria-label="Next products"
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-[#F8D8D8] text-primary transition hover:bg-primary hover:text-white disabled:cursor-default disabled:opacity-40 disabled:hover:bg-[#F8D8D8] disabled:hover:text-primary">
+                <svg viewBox="0 0 24 24"
+                  class="h-4 w-4 fill-none stroke-current" stroke-width="2.4"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Explore All Button -->
+          <div class="mt-10 flex justify-center">
+            <a href="#products"
+              class="group inline-flex items-center gap-3 rounded-md bg-primary px-7 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-primary-dark">
+              Explore all items
+              <svg viewBox="0 0 24 24"
+                class="h-4 w-4 fill-none stroke-current transition-transform duration-300 group-hover:translate-x-1"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Toast -->
+        <div id="products-toast" role="status" aria-live="polite"
+          class="pointer-events-none fixed bottom-7 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-lg bg-primary px-5 py-3 text-sm text-white opacity-0 transition duration-300"></div>
+      </section>
+
+      <!-- Special Package Section -->
+      <section id="special-package" class="bg-[#FFFDF9] py-16 md:py-20"
+        aria-labelledby="special-package-title">
+
+        <h2 id="special-package-title"
+          class="mb-12 px-5 text-center font-heading text-3xl font-bold text-primary md:mb-16 md:text-4xl">
+          Special Package
+        </h2>
+
+        <div
+          class="mx-auto grid max-w-7xl items-start gap-10 px-5 md:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+
+          <!-- Left: Selected package -->
+          <div data-fade class="transition-opacity duration-200">
+            <div
+              class="relative aspect-[4/3] overflow-hidden rounded-xl bg-[#D9D9D9]">
+              <img id="package-image" src="images/room1.png"
+                alt="Larkin Wood Full Set"
+                class="h-full w-full object-cover" />
+              <button id="package-expand" type="button"
+                aria-label="View image full size"
+                class="absolute bottom-3 right-3 grid h-8 w-8 place-items-center rounded-md bg-primary text-white transition hover:scale-110 hover:bg-primary-dark">
+                <svg viewBox="0 0 24 24"
+                  class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true"><path
+                    d="M8 3H5a2 2 0 00-2 2v3M16 3h3a2 2 0 012 2v3M8 21H5a2 2 0 01-2-2v-3M16 21h3a2 2 0 002-2v-3" /></svg>
+              </button>
+            </div>
+
+            <div class="mt-5 flex items-start justify-between gap-4">
+              <div>
+                <h3 id="package-title"
+                  class="text-xl font-normal text-primary md:text-2xl">Larkin
+                  Wood Full Set</h3>
+                <div id="package-stars" data-stars="5" data-size="lg"
+                  class="mt-3 flex gap-1"></div>
+                <p id="package-price"
+                  class="mt-3 text-base font-bold text-primary">$729.99</p>
+              </div>
+
+              <button id="package-add" type="button"
+                class="inline-flex shrink-0 items-center gap-3 rounded-md bg-primary/60 px-5 py-3 text-xs font-semibold text-white transition hover:bg-primary active:scale-95">
+                <span id="package-add-label">Add to cart</span>
+                <svg viewBox="0 0 24 24"
+                  class="h-4 w-4 fill-none stroke-current" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true"><path
+                    d="M3 4h2l2.4 11h10.2L20 7H6.2" /><circle cx="9" cy="20"
+                    r="1.2" /><circle cx="17" cy="20" r="1.2" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Description + packages list -->
+          <div>
+            <div data-fade class="transition-opacity duration-200">
+              <h3 class="text-sm font-bold text-primary">Description</h3>
+              <p id="package-desc"
+                class="mt-3 max-h-[60px] overflow-hidden text-xs leading-5 text-primary/70 transition-[max-height] duration-300">
+                Cast Aluminum Outdoor Chaise Lounge As an elegant and classic
+                touch to your outdoor space, this cast Aluminum Chaise Lounge
+                combines the appearance, function and quality all together,
+                offering you with the best experience.
+              </p>
+              <button id="package-desc-toggle" type="button"
+                aria-expanded="false"
+                class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary">
+                <span>See More</span>
+                <svg viewBox="0 0 24 24"
+                  class="h-3 w-3 fill-none stroke-current transition-transform duration-300"
+                  stroke-width="2.6" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true"><path
+                    d="M6 9l6 6 6-6" /></svg>
+              </button>
+            </div>
+
+            <div class="mt-6 flex gap-4">
+
+              <!-- List -->
+              <div id="package-list" role="listbox" aria-label="Packages"
+                class="flex h-[340px] flex-1 snap-y snap-mandatory flex-col gap-3 overflow-y-auto scroll-smooth pr-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+
+                <!-- Package 1 (active) -->
+                <article role="option" tabindex="0" aria-selected="true"
+                  data-package data-active="true"
+                  data-title="Larkin Wood Full Set" data-price="$729.99"
+                  data-rating="5"
+                  data-image="images/room1.png"
+                  data-desc="Cast Aluminum Outdoor Chaise Lounge As an elegant and classic touch to your outdoor space, this cast Aluminum Chaise Lounge combines the appearance, function and quality all together, offering you with the best experience."
+                  class="group flex shrink-0 cursor-pointer snap-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary/50 data-[active=true]:bg-[#CAF3E5]">
+                  <div
+                    class="h-[100px] w-[120px] shrink-0 overflow-hidden rounded-lg bg-[#D9D9D9] sm:w-[140px]">
+                    <img src="images/room1.png" alt
+                      draggable="false" class="h-full w-full object-cover" />
+                  </div>
+                  <div class="flex min-w-0 flex-1 flex-col">
+                    <div class="flex items-start justify-between gap-3">
+                      <h4
+                        class="text-sm text-primary group-data-[active=true]:text-base">Living
+                        Room Family Set</h4>
+                      <span
+                        class="shrink-0 text-sm font-bold text-primary">$229.99</span>
+                    </div>
+                    <div data-stars="5" class="mt-1 flex gap-0.5"></div>
+                    <div class="mt-2 group-data-[active=true]:hidden">
+                      <p data-more
+                        class="max-h-8 overflow-hidden text-[11px] leading-4 text-primary/60 transition-[max-height] duration-300">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <button type="button" data-toggle-more
+                        aria-expanded="false"
+                        class="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-primary">
+                        <span>See More</span>
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current transition-transform duration-300"
+                          stroke-width="2.6" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><path
+                            d="M6 9l6 6 6-6" /></svg>
+                      </button>
+                    </div>
+                    <button type="button" data-open-lightbox
+                      class="mt-auto hidden w-full items-center justify-between pt-2 text-[11px] text-primary group-data-[active=true]:flex">
+                      <span class="underline">See Details</span>
+                      <span
+                        class="grid h-6 w-6 place-items-center rounded bg-primary text-white">
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current"
+                          stroke-width="2.4" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><circle
+                            cx="11" cy="11" r="6" /><path
+                            d="M16 16l4 4" /></svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Package 2 -->
+                <article role="option" tabindex="0" aria-selected="false"
+                  data-package data-active="false"
+                  data-title="Havenly Lounge Set" data-price="$839.99"
+                  data-rating="4"
+                  data-image="images/room2.png"
+                  data-desc="A relaxed lounge set built for long evenings outside. Weather-resistant cushions and a powder-coated frame keep it comfortable and easy to maintain through every season."
+                  class="group flex shrink-0 cursor-pointer snap-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary/50 data-[active=true]:bg-[#CAF3E5]">
+                  <div
+                    class="h-[100px] w-[120px] shrink-0 overflow-hidden rounded-lg bg-[#D9D9D9] sm:w-[140px]">
+                    <img src="images/room2.png" alt
+                      draggable="false" class="h-full w-full object-cover" />
+                  </div>
+                  <div class="flex min-w-0 flex-1 flex-col">
+                    <div class="flex items-start justify-between gap-3">
+                      <h4
+                        class="text-sm text-primary group-data-[active=true]:text-base">Living
+                        Room Special Set</h4>
+                      <span
+                        class="shrink-0 text-sm font-bold text-primary">$329.99</span>
+                    </div>
+                    <div data-stars="4" class="mt-1 flex gap-0.5"></div>
+                    <div class="mt-2 group-data-[active=true]:hidden">
+                      <p data-more
+                        class="max-h-8 overflow-hidden text-[11px] leading-4 text-primary/60 transition-[max-height] duration-300">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <button type="button" data-toggle-more
+                        aria-expanded="false"
+                        class="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-primary">
+                        <span>See More</span>
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current transition-transform duration-300"
+                          stroke-width="2.6" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><path
+                            d="M6 9l6 6 6-6" /></svg>
+                      </button>
+                    </div>
+                    <button type="button" data-open-lightbox
+                      class="mt-auto hidden w-full items-center justify-between pt-2 text-[11px] text-primary group-data-[active=true]:flex">
+                      <span class="underline">See Details</span>
+                      <span
+                        class="grid h-6 w-6 place-items-center rounded bg-primary text-white">
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current"
+                          stroke-width="2.4" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><circle
+                            cx="11" cy="11" r="6" /><path
+                            d="M16 16l4 4" /></svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Package 3 -->
+                <article role="option" tabindex="0" aria-selected="false"
+                  data-package data-active="false"
+                  data-title="Cedar Terrace Set" data-price="$649.99"
+                  data-rating="5"
+                  data-image="images/room3.png"
+                  data-desc="Solid cedar frames with a natural finish that ages beautifully. A compact set that fits balconies and small terraces without losing comfort."
+                  class="group flex shrink-0 cursor-pointer snap-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary/50 data-[active=true]:bg-[#CAF3E5]">
+                  <div
+                    class="h-[100px] w-[120px] shrink-0 overflow-hidden rounded-lg bg-[#D9D9D9] sm:w-[140px]">
+                    <img src="images/room3.png" alt
+                      draggable="false" class="h-full w-full object-cover" />
+                  </div>
+                  <div class="flex min-w-0 flex-1 flex-col">
+                    <div class="flex items-start justify-between gap-3">
+                      <h4
+                        class="text-sm text-primary group-data-[active=true]:text-base">Living
+                        Room Special Set</h4>
+                      <span
+                        class="shrink-0 text-sm font-bold text-primary">$587.99</span>
+                    </div>
+                    <div data-stars="5" class="mt-1 flex gap-0.5"></div>
+                    <div class="mt-2 group-data-[active=true]:hidden">
+                      <p data-more
+                        class="max-h-8 overflow-hidden text-[11px] leading-4 text-primary/60 transition-[max-height] duration-300">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <button type="button" data-toggle-more
+                        aria-expanded="false"
+                        class="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-primary">
+                        <span>See More</span>
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current transition-transform duration-300"
+                          stroke-width="2.6" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><path
+                            d="M6 9l6 6 6-6" /></svg>
+                      </button>
+                    </div>
+                    <button type="button" data-open-lightbox
+                      class="mt-auto hidden w-full items-center justify-between pt-2 text-[11px] text-primary group-data-[active=true]:flex">
+                      <span class="underline">See Details</span>
+                      <span
+                        class="grid h-6 w-6 place-items-center rounded bg-primary text-white">
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current"
+                          stroke-width="2.4" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><circle
+                            cx="11" cy="11" r="6" /><path
+                            d="M16 16l4 4" /></svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Package 4 -->
+                <article role="option" tabindex="0" aria-selected="false"
+                  data-package data-active="false"
+                  data-title="Nordic Dining Set" data-price="$959.99"
+                  data-rating="4"
+                  data-image="images/room4.png"
+                  data-desc="A six-seat dining set with clean Scandinavian lines. The table top resists scratches and heat, and the chairs are padded for long dinners."
+                  class="group flex shrink-0 cursor-pointer snap-start gap-4 rounded-xl p-3 transition-colors duration-300 hover:bg-primary/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary/50 data-[active=true]:bg-[#CAF3E5]">
+                  <div
+                    class="h-[100px] w-[120px] shrink-0 overflow-hidden rounded-lg bg-[#D9D9D9] sm:w-[140px]">
+                    <img src="images/room4.png" alt
+                      draggable="false" class="h-full w-full object-cover" />
+                  </div>
+                  <div class="flex min-w-0 flex-1 flex-col">
+                    <div class="flex items-start justify-between gap-3">
+                      <h4
+                        class="text-sm text-primary group-data-[active=true]:text-base">Dining
+                        Room Set</h4>
+                      <span
+                        class="shrink-0 text-sm font-bold text-primary">$419.99</span>
+                    </div>
+                    <div data-stars="4" class="mt-1 flex gap-0.5"></div>
+                    <div class="mt-2 group-data-[active=true]:hidden">
+                      <p data-more
+                        class="max-h-8 overflow-hidden text-[11px] leading-4 text-primary/60 transition-[max-height] duration-300">Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <button type="button" data-toggle-more
+                        aria-expanded="false"
+                        class="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-primary">
+                        <span>See More</span>
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current transition-transform duration-300"
+                          stroke-width="2.6" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><path
+                            d="M6 9l6 6 6-6" /></svg>
+                      </button>
+                    </div>
+                    <button type="button" data-open-lightbox
+                      class="mt-auto hidden w-full items-center justify-between pt-2 text-[11px] text-primary group-data-[active=true]:flex">
+                      <span class="underline">See Details</span>
+                      <span
+                        class="grid h-6 w-6 place-items-center rounded bg-primary text-white">
+                        <svg viewBox="0 0 24 24"
+                          class="h-3 w-3 fill-none stroke-current"
+                          stroke-width="2.4" stroke-linecap="round"
+                          stroke-linejoin="round" aria-hidden="true"><circle
+                            cx="11" cy="11" r="6" /><path
+                            d="M16 16l4 4" /></svg>
+                      </span>
+                    </button>
+                  </div>
+                </article>
+
+              </div>
+
+              <!-- Vertical progress + arrows -->
+              <div class="flex w-8 shrink-0 flex-col items-center gap-4">
+                <div id="package-progress-track"
+                  class="relative min-h-[120px] w-[3px] flex-1 cursor-pointer rounded-full bg-primary/20 before:absolute before:inset-y-0 before:-inset-x-3 before:content-['']">
+                  <div id="package-progress-thumb"
+                    class="absolute left-0 top-0 h-1/3 w-full rounded-full bg-primary transition-[top,height] duration-150"></div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <button id="package-up" type="button"
+                    aria-label="Previous packages"
+                    class="grid h-7 w-7 place-items-center rounded-full bg-[#E0EFF6] text-primary transition hover:bg-primary hover:text-white disabled:cursor-default disabled:opacity-40 disabled:hover:bg-[#E0EFF6] disabled:hover:text-primary">
+                    <svg viewBox="0 0 24 24"
+                      class="h-3.5 w-3.5 fill-none stroke-current"
+                      stroke-width="2.4" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true"><path
+                        d="M5 15l7-7 7 7" /></svg>
+                  </button>
+                  <button id="package-down" type="button"
+                    aria-label="Next packages"
+                    class="grid h-7 w-7 place-items-center rounded-full bg-[#F8D8D8] text-primary transition hover:bg-primary hover:text-white disabled:cursor-default disabled:opacity-40 disabled:hover:bg-[#F8D8D8] disabled:hover:text-primary">
+                    <svg viewBox="0 0 24 24"
+                      class="h-3.5 w-3.5 fill-none stroke-current"
+                      stroke-width="2.4" stroke-linecap="round"
+                      stroke-linejoin="round" aria-hidden="true"><path
+                        d="M5 9l7 7 7-7" /></svg>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Lightbox -->
+        <dialog id="package-lightbox"
+          class="w-[92vw] max-w-3xl overflow-hidden rounded-2xl bg-[#FFFDF9] p-0 backdrop:bg-black/70">
+          <div class="relative">
+            <img id="package-lightbox-img" src alt
+              class="max-h-[80vh] w-full bg-[#D9D9D9] object-contain" />
+            <button id="package-lightbox-close" type="button" aria-label="Close"
+              class="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full bg-white/90 text-primary transition hover:bg-white">
+              <svg viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current"
+                stroke-width="2.4" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true"><path
+                  d="M6 6l12 12M18 6L6 18" /></svg>
+            </button>
+          </div>
+        </dialog>
+
+        <!-- Toast -->
+        <div id="package-toast" role="status" aria-live="polite"
+          class="pointer-events-none fixed bottom-7 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-lg bg-primary px-5 py-3 text-sm text-white opacity-0 transition duration-300"></div>
+      </section>
+
+      <!-- Our Own Creation Section -->
+      <section id="our-creation"
+        class="overflow-hidden bg-[#FFFDF9] py-12 md:py-16"
+        aria-labelledby="our-creation-title">
+        <div class="flex flex-col md:flex-row md:items-center">
+
+          <!-- Info panel -->
+          <div
+            class="relative z-10 flex w-[88%] shrink-0 flex-col justify-center rounded-r-2xl bg-[#6B8F89] py-10 pl-6 pr-6 text-white md:h-[380px] md:w-[420px] md:py-0 md:pl-14">
+            <h2 id="our-creation-title"
+              class="font-heading text-3xl font-bold leading-tight md:text-4xl">
+              Our<br />Own Creation
+            </h2>
+            <p class="mt-3 text-sm text-white/90">Designed in our studio</p>
+
+            <div class="mt-8 flex items-center gap-4">
+              <a href="#rooms"
+                class="text-xs font-semibold transition hover:underline">More</a>
+
+              <div id="rooms-progress-track"
+                class="relative h-[2px] w-20 cursor-pointer rounded-full bg-white/30 before:absolute before:inset-x-0 before:-inset-y-3 before:content-['']">
+                <div id="rooms-progress-thumb"
+                  class="absolute left-0 top-0 h-full w-1/3 rounded-full bg-white"></div>
+              </div>
+
+              <div class="flex gap-2">
+                <button id="rooms-prev" type="button"
+                  aria-label="Previous rooms"
+                  class="grid h-7 w-7 place-items-center rounded-full bg-[#E0EFF6] text-primary transition hover:scale-110 disabled:cursor-default disabled:opacity-40 disabled:hover:scale-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-3.5 w-3.5 fill-none stroke-current"
+                    stroke-width="2.4" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true"><path
+                      d="M15 5l-7 7 7 7" /></svg>
+                </button>
+                <button id="rooms-next" type="button" aria-label="Next rooms"
+                  class="grid h-7 w-7 place-items-center rounded-full bg-[#F8D8D8] text-primary transition hover:scale-110 disabled:cursor-default disabled:opacity-40 disabled:hover:scale-100">
+                  <svg viewBox="0 0 24 24"
+                    class="h-3.5 w-3.5 fill-none stroke-current"
+                    stroke-width="2.4" stroke-linecap="round"
+                    stroke-linejoin="round" aria-hidden="true"><path
+                      d="M9 5l7 7-7 7" /></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rooms slider -->
+          <div id="rooms-slider" role="region" aria-label="Rooms"
+            class="-my-6 mt-0 flex min-w-0 flex-1 cursor-grab select-none gap-4 overflow-x-auto overscroll-x-contain py-6 pl-4 pr-5 [scrollbar-width:none] md:gap-5 md:pl-6 [&::-webkit-scrollbar]:hidden">
+
+            <!-- Living Room -->
+            <a href="#living-room" draggable="false"
+              aria-label="Living Room, explore all rooms"
+              class="group relative block h-[300px] w-[220px] shrink-0 overflow-hidden rounded-xl bg-[#D9D9D9] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl focus-visible:-translate-y-2 focus-visible:shadow-2xl focus-visible:outline-none md:h-[380px] md:w-[290px]">
+              <img src="src/assets/images/LivingRoom.jpg" alt draggable="false"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <span
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-3 whitespace-nowrap rounded-md bg-white px-5 py-2.5 text-xs font-semibold text-primary opacity-0 shadow-sm transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
+                Explore All Rooms
+              </span>
+            </a>
+
+            <!-- Bedroom -->
+            <a href="#bedroom" draggable="false"
+              aria-label="Bedroom, explore all rooms"
+              class="group relative block h-[300px] w-[220px] shrink-0 overflow-hidden rounded-xl bg-[#D9D9D9] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl focus-visible:-translate-y-2 focus-visible:shadow-2xl focus-visible:outline-none md:h-[380px] md:w-[290px]">
+              <img src="src/assets/images/BedRoom_11.jpg" alt draggable="false"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <span
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-3 whitespace-nowrap rounded-md bg-white px-5 py-2.5 text-xs font-semibold text-primary opacity-0 shadow-sm transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
+                Explore All Rooms
+              </span>
+            </a>
+
+            <!-- Dining Room -->
+            <a href="#dining-room" draggable="false"
+              aria-label="Dining Room, explore all rooms"
+              class="group relative block h-[300px] w-[220px] shrink-0 overflow-hidden rounded-xl bg-[#D9D9D9] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl focus-visible:-translate-y-2 focus-visible:shadow-2xl focus-visible:outline-none md:h-[380px] md:w-[290px]">
+              <img src="src/assets/images/Dining_Room.jpg" alt draggable="false"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <span
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-3 whitespace-nowrap rounded-md bg-white px-5 py-2.5 text-xs font-semibold text-primary opacity-0 shadow-sm transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
+                Explore All Rooms
+              </span>
+            </a>
+
+            <!-- Kitchen -->
+            <a href="#kitchen" draggable="false"
+              aria-label="Kitchen, explore all rooms"
+              class="group relative block h-[300px] w-[220px] shrink-0 overflow-hidden rounded-xl bg-[#D9D9D9] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl focus-visible:-translate-y-2 focus-visible:shadow-2xl focus-visible:outline-none md:h-[380px] md:w-[290px]">
+              <img src="src/assets/images/Kitchen.jpg" alt draggable="false"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <span
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-3 whitespace-nowrap rounded-md bg-white px-5 py-2.5 text-xs font-semibold text-primary opacity-0 shadow-sm transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
+                Explore All Rooms
+              </span>
+            </a>
+
+            <!-- Office -->
+            <a href="#office" draggable="false"
+              aria-label="Office, explore all rooms"
+              class="group relative block h-[300px] w-[220px] shrink-0 overflow-hidden rounded-xl bg-[#D9D9D9] transition duration-300 ease-out hover:-translate-y-2 hover:shadow-2xl focus-visible:-translate-y-2 focus-visible:shadow-2xl focus-visible:outline-none md:h-[380px] md:w-[290px]">
+              <img src="src/assets/images/Office.jpg" alt draggable="false"
+                class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <span
+                class="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-3 whitespace-nowrap rounded-md bg-white px-5 py-2.5 text-xs font-semibold text-primary opacity-0 shadow-sm transition duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
+                Explore All Rooms
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section id="benefits" class="bg-[#E0EFF6] px-6 py-16 md:py-20"
+        aria-labelledby="benefits-title">
+        <div class="mx-auto max-w-5xl">
+
+          <h2 id="benefits-title"
+            class="mb-12 text-center font-heading text-3xl font-bold text-primary md:mb-16 md:text-4xl">
+            Benefits for your expediency
+          </h2>
+
+          <ul class="grid gap-12 sm:grid-cols-3 sm:gap-8">
+
+            <!-- Payment Method -->
+            <li
+              class="benefit-item group flex flex-col items-center text-center">
+              <div class="benefit-icon">
+                <span
+                  class="grid h-17 w-17 place-items-center rounded-xl bg-[#EEEBFF] transition duration-500 ease-out group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                    viewBox="0 0 68 68" fill="none">
+                    <g clip-path="url(#clip0_201_823)">
+                      <path
+                        d="M22.9168 52.0494C22.8995 51.9644 22.8743 51.8808 22.8411 51.7997C22.8079 51.7201 22.7667 51.643 22.7189 51.5713C22.6711 51.4983 22.6153 51.4305 22.5542 51.3694C22.4931 51.3083 22.4254 51.2526 22.3523 51.2047C22.2806 51.1569 22.2036 51.1158 22.1226 51.0826C22.0429 51.0494 21.9592 51.0228 21.8742 51.0069C21.7029 50.9723 21.5263 50.9723 21.3563 51.0069C21.2713 51.0228 21.1876 51.0494 21.1066 51.0826C21.0269 51.1158 20.9498 51.1569 20.8781 51.2047C20.8051 51.2526 20.7373 51.3083 20.6762 51.3694C20.6152 51.4305 20.5594 51.4983 20.5116 51.5713C20.4624 51.643 20.4226 51.7201 20.3894 51.7997C20.3562 51.8808 20.3296 51.9644 20.3137 52.0494C20.2964 52.1344 20.2871 52.2221 20.2871 52.3084C20.2871 52.3947 20.2964 52.4824 20.3137 52.5674C20.3296 52.6524 20.3562 52.7361 20.3894 52.8158C20.4226 52.8968 20.4624 52.9738 20.5116 53.0455C20.5594 53.1186 20.6152 53.1863 20.6762 53.2474C20.7373 53.3085 20.8051 53.3643 20.8781 53.4121C20.9498 53.46 21.0269 53.5012 21.1066 53.5344C21.1876 53.5676 21.2713 53.5942 21.3563 53.6101C21.4413 53.6274 21.5289 53.6367 21.6152 53.6367C21.7016 53.6367 21.7892 53.6274 21.8742 53.6101C21.9592 53.5942 22.0429 53.5676 22.1226 53.5344C22.2036 53.5012 22.2806 53.4599 22.3523 53.4121C22.4254 53.3643 22.4931 53.3085 22.5542 53.2474C22.6153 53.1863 22.6711 53.1186 22.7189 53.0455C22.7667 52.9738 22.8079 52.8968 22.8411 52.8158C22.8743 52.7361 22.8995 52.6524 22.9168 52.5674C22.9341 52.4824 22.9434 52.3947 22.9434 52.3084C22.9434 52.2221 22.9341 52.1344 22.9168 52.0494Z"
+                        fill="#70908B" />
+                      <path
+                        d="M61.0928 52.4585C61.0876 52.4452 61.0823 52.4321 61.0768 52.4191C59.8543 49.5587 56.9875 48.5015 53.5946 49.6603L44.3418 52.2191C43.8069 50.599 42.4725 49.2204 40.5858 48.5202C40.5741 48.516 40.5624 48.5117 40.5506 48.5078L30.3797 45.0557C29.5331 43.9615 26.8814 41.1615 21.9165 41.1615C18.4467 41.1615 15.3773 43.5418 13.6213 46.1363H1.32812C0.594602 46.1363 0 46.7309 0 47.4644V64.209C0 64.9425 0.594602 65.5371 1.32812 65.5371H9.22476C9.95828 65.5371 10.5529 64.9425 10.5529 64.209V63.0623H14.2561C14.9896 63.0623 15.5842 62.4677 15.5842 61.7341V61.3519C17.743 61.5402 18.453 61.9497 20.4356 63.0929C21.9603 63.9722 24.2647 65.301 28.4146 67.1668C28.4338 67.1755 28.4534 67.1837 28.4729 67.1914C29.2694 67.5047 30.8263 67.9969 32.7459 67.9969C34.0819 67.9969 35.594 67.7582 37.1461 67.0547L57.598 59.732C57.6344 59.719 57.6702 59.7044 57.7053 59.6882C59.6599 58.7889 62.5726 56.2544 61.0928 52.4585ZM7.89663 62.8807H2.65625V48.7924H7.89663V62.8807ZM12.928 60.4059H10.5529V48.7924H12.928V60.4059ZM56.644 57.252L36.2012 64.5714C36.1833 64.5778 36.159 64.5874 36.1413 64.5945C36.1234 64.6018 36.1055 64.6095 36.0878 64.6176C33.2407 65.9261 30.5344 65.1428 29.4737 64.7304C25.4652 62.9267 23.3257 61.693 21.7625 60.7916C19.5892 59.5384 18.542 58.9343 15.5842 58.6901V47.9931C16.8431 45.9297 19.2845 43.8176 21.9166 43.8176C26.4304 43.8176 28.343 46.7534 28.4182 46.8719C28.5803 47.1357 28.8296 47.3345 29.1227 47.434L39.678 51.0164C41.3638 51.6492 42.2547 53.0928 41.8452 54.5325C41.6562 55.1974 41.2196 55.7488 40.6158 56.0852C40.0172 56.4187 39.3253 56.5012 38.6657 56.3187L26.7666 52.5479C26.067 52.3262 25.3208 52.7135 25.0993 53.4128C24.8776 54.112 25.2649 54.8584 25.9642 55.0801L37.884 58.8574C37.8966 58.8614 37.9092 58.8653 37.922 58.8688C38.3978 59.0042 38.8823 59.0711 39.3639 59.0711C40.2455 59.0711 41.1174 58.8465 41.9087 58.4056C43.1323 57.7239 44.0171 56.6064 44.4002 55.259C44.4307 55.1514 44.4578 55.0438 44.4813 54.9363L54.4533 52.1738C55.8935 51.6818 57.7841 51.5045 58.6258 53.4432C59.4971 55.7192 57.2326 56.9712 56.644 57.252Z"
+                        fill="#70908B" />
+                      <path
+                        d="M47.6877 17.4706C47.6704 17.3856 47.6452 17.3019 47.6106 17.2209C47.5774 17.1412 47.5376 17.0642 47.4884 16.9925C47.4406 16.9194 47.3848 16.8517 47.3238 16.7906C47.2627 16.7295 47.1949 16.6737 47.1219 16.6259C47.0502 16.5781 46.9731 16.5369 46.8934 16.5037C46.8124 16.4705 46.7287 16.4439 46.6451 16.428C46.4737 16.3935 46.2971 16.3935 46.1258 16.428C46.0408 16.4439 45.9571 16.4705 45.8774 16.5037C45.7964 16.5369 45.7194 16.5781 45.6477 16.6259C45.5746 16.6737 45.5069 16.7295 45.4458 16.7906C45.3847 16.8517 45.3289 16.9194 45.2811 16.9925C45.2333 17.0642 45.1921 17.1412 45.1589 17.2209C45.1257 17.3019 45.0991 17.3856 45.0832 17.4706C45.0659 17.5556 45.0566 17.6432 45.0566 17.7296C45.0566 17.8159 45.0659 17.9035 45.0832 17.9885C45.0991 18.0735 45.1257 18.1572 45.1589 18.2369C45.1921 18.3179 45.2333 18.395 45.2811 18.4667C45.3289 18.5397 45.3847 18.6075 45.4458 18.6685C45.5069 18.7296 45.5746 18.7854 45.6477 18.8332C45.7194 18.881 45.7964 18.9222 45.8774 18.9554C45.9571 18.9886 46.0408 19.0139 46.1258 19.0311C46.2108 19.0484 46.2984 19.0577 46.3848 19.0577C46.4711 19.0577 46.5587 19.0484 46.6451 19.0311C46.7287 19.0139 46.8124 18.9886 46.8934 18.9554C46.9731 18.9222 47.0502 18.881 47.1219 18.8332C47.1949 18.7854 47.2627 18.7296 47.3238 18.6685C47.3848 18.6075 47.4406 18.5397 47.4884 18.4667C47.5376 18.395 47.5774 18.3179 47.6106 18.2369C47.6452 18.1572 47.6704 18.0735 47.6877 17.9885C47.7049 17.9035 47.7129 17.8159 47.7129 17.7296C47.7129 17.6432 47.7049 17.5556 47.6877 17.4706Z"
+                        fill="#70908B" />
+                      <path
+                        d="M66.6719 4.50111H58.7753C58.0418 4.50111 57.4472 5.09571 57.4472 5.82924V6.97594H53.744C53.0104 6.97594 52.4158 7.57054 52.4158 8.30406V8.6863C50.2571 8.49784 49.5471 8.08851 47.5646 6.94526C46.0399 6.06604 43.7355 4.73725 39.5855 2.87137C39.5662 2.8626 39.5468 2.8545 39.5271 2.8468C38.1762 2.31528 34.6358 1.26952 30.8545 2.9832L25.5102 4.89676L21.0053 0.392026C20.4867 -0.126606 19.6457 -0.126606 19.1271 0.392026L4.33732 15.1816C3.85893 15.6601 3.76715 16.4898 4.33732 17.06L29.6098 42.3325C30.0142 42.737 30.9612 42.8594 31.4882 42.3325L44.9906 28.8302C45.3416 28.8605 45.7059 28.8769 46.0835 28.8769C49.5533 28.8769 52.6226 26.4966 54.3785 23.9022H66.6719C67.4055 23.9022 68.0001 23.3076 68.0001 22.5741V5.82924C68.0001 5.09571 67.4055 4.50111 66.6719 4.50111ZM20.066 3.20938L23.0931 6.23644C22.1933 6.79292 21.153 7.09069 20.066 7.09069C18.979 7.09069 17.9388 6.79306 17.039 6.23644L20.066 3.20938ZM10.1819 19.1479L7.1548 16.1207L10.1819 13.0937C10.7383 13.9935 11.0361 15.0338 11.0361 16.1207C11.0361 17.2077 10.7385 18.248 10.1819 19.1479ZM30.5491 39.515L27.5225 36.4885C29.3703 35.3481 31.7275 35.3481 33.5755 36.4885L30.5491 39.515ZM35.489 34.5752C32.5541 32.4462 28.544 32.4462 25.6091 34.5752L12.0953 21.0612C13.1324 19.6348 13.6924 17.9214 13.6924 16.1207C13.6924 14.3199 13.1326 12.6067 12.0953 11.1803L15.1257 8.15C16.5521 9.18713 18.2654 9.74707 20.0662 9.74707C21.867 9.74707 23.5803 9.18713 25.0067 8.15L27.8793 11.0226C27.2594 11.1141 26.655 11.3184 26.0913 11.6325C25.1393 12.1629 24.3924 12.9573 23.9273 13.9183C22.4292 14.1958 21.0422 14.921 19.9542 16.0089C17.0024 18.9608 17.0025 23.7637 19.9543 26.7156C21.4302 28.1914 23.3688 28.9294 25.3076 28.9294C27.2463 28.9294 29.1851 28.1915 30.661 26.7156C31.6213 25.7554 32.2939 24.5752 32.6309 23.289L37.1152 24.8109C36.6104 27.1495 37.1274 29.6097 38.5221 31.5421L35.489 34.5752ZM27.4143 21.518C27.426 21.5222 27.4377 21.5265 27.4495 21.5305L30.1052 22.4319C29.9047 23.337 29.4508 24.1692 28.7828 24.8374C26.8666 26.7533 23.7487 26.7536 21.8327 24.8374C19.9165 22.9213 19.9165 19.8035 21.8327 17.8873C22.2949 17.4248 22.8404 17.0634 23.4347 16.8184C23.6799 18.8587 25.1489 20.6773 27.4143 21.518ZM40.4358 29.6283C39.9231 28.7929 39.633 27.8395 39.5872 26.8663C40.2234 27.3263 41.0009 27.7769 41.9295 28.1346L40.4358 29.6283ZM52.4157 22.0446C51.1569 24.1082 48.7155 26.2203 46.0835 26.2203C45.591 26.2203 45.1295 26.1853 44.698 26.1229C44.6962 26.1226 44.6945 26.1223 44.6928 26.1221C41.8246 25.7054 40.2817 24.0753 39.7732 23.4298C39.7461 23.39 39.6306 23.239 39.6135 23.2139C39.4588 22.9373 39.2051 22.715 38.8816 22.6052L28.3219 19.0212C26.6368 18.3888 25.746 16.9458 26.1543 15.5066C26.1546 15.5057 26.1548 15.5048 26.1551 15.5038C26.1555 15.5028 26.1558 15.5016 26.156 15.5005C26.3458 14.8378 26.7817 14.2881 27.3841 13.9524C27.9826 13.619 28.6744 13.5362 29.3342 13.7191L41.2333 17.4898C41.9327 17.7117 42.6791 17.3242 42.9006 16.6249C43.1222 15.9256 42.735 15.1792 42.0357 14.9576L32.5722 11.9587L32.4896 11.8761C32.4888 11.8753 32.488 11.8743 32.4871 11.8735L27.5876 6.97408L31.7988 5.46613C31.813 5.46095 31.8306 5.45444 31.8446 5.44873C31.8482 5.44727 31.8551 5.44461 31.8586 5.44315C31.8767 5.43585 31.8945 5.42814 31.9121 5.42004C34.7591 4.11157 37.4653 4.89477 38.526 5.30728C42.5347 7.11101 44.6743 8.3447 46.2375 9.2461C48.4109 10.4995 49.4581 11.1034 52.4157 11.3476V22.0446V22.0446ZM57.4472 21.2457H55.0721V9.63219H57.4472V21.2457ZM65.3438 21.2457H60.1034V7.15736H65.3438V21.2457Z"
+                        fill="#70908B" />
+                    </g>
+                    <defs>
+                      <clippath id="clip0_201_823">
+                        <rect width="68" height="68" fill="white" />
+                      </clippath>
+                    </defs>
+                  </svg>
+                </span>
+              </div>
+              <h3
+                class="benefit-title mt-6 font-heading text-base font-bold text-primary md:text-lg">Payment
+                Method</h3>
+              <p
+                class="benefit-text mt-3 max-w-[200px] text-[13px] leading-5 text-primary font-body ">
+                We offer flexible payment options, to make easier.
+              </p>
+            </li>
+
+            <!-- Return policy -->
+            <li
+              class="benefit-item group flex flex-col items-center text-center">
+              <div class="benefit-icon">
+                <span
+                  class="grid h-17 w-17 place-items-center rounded-xl bg-[#FFF4E7] transition duration-500 ease-out group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                    viewBox="0 0 68 68" fill="none">
+                    <path
+                      d="M67.0029 14.6389L40.6404 0.163061C40.2443 -0.0543536 39.7641 -0.0543536 39.368 0.163061L29.4315 5.61908C29.2218 5.67434 29.0261 5.77969 28.8639 5.931L13.0061 14.6389C12.5831 14.8708 12.3203 15.3149 12.3203 15.7978V33.3056C9.64519 34.1422 7.19372 35.6176 5.1554 37.6565C-0.157572 42.9689 -1.51215 51.0716 1.7847 57.8187C2.10488 58.4746 2.89656 58.7467 3.55242 58.426C4.20879 58.1053 4.48043 57.3137 4.16025 56.6578C1.35917 50.925 2.51027 44.0405 7.02485 39.5259C9.84814 36.7027 13.6015 35.1477 17.594 35.1477C21.5865 35.1477 25.3398 36.7027 28.1631 39.5259C30.9859 42.3487 32.5409 46.1021 32.5409 50.0946C32.5409 54.087 30.9859 57.8404 28.1626 60.6637C23.648 65.1783 16.7636 66.3294 11.0308 63.5283C10.3749 63.2076 9.58322 63.4798 9.26304 64.1356C8.94234 64.792 9.21398 65.5837 9.87035 65.9039C12.328 67.1051 14.9649 67.6886 17.5826 67.6886C22.1494 67.6881 26.6552 65.9106 30.0326 62.5332C31.5813 60.9844 32.8053 59.1976 33.6713 57.2553L39.368 60.3833C39.5663 60.4923 39.7852 60.5465 40.0042 60.5465C40.2232 60.5465 40.4427 60.4923 40.6404 60.3833L67.0029 45.9079C67.4258 45.6755 67.6887 45.2314 67.6887 44.7491V35.5614C67.6887 34.8311 67.0968 34.2393 66.3666 34.2393C65.6364 34.2393 65.0446 34.8311 65.0446 35.5614V43.9667L41.3304 56.9883V31.0535L49.1568 26.7558V33.5685C49.1568 34.0364 49.4036 34.4691 49.8059 34.7067C50.0135 34.8291 50.2459 34.8905 50.4788 34.8905C50.6978 34.8905 50.9173 34.8363 51.1161 34.7268L56.7653 31.6174C57.1877 31.385 57.4495 30.9414 57.4495 30.4596V22.202L65.0446 18.0319V24.9855C65.0446 25.7157 65.6364 26.3076 66.3666 26.3076C67.0968 26.3076 67.6887 25.7157 67.6887 24.9855V15.7978C67.6887 15.3155 67.4258 14.8708 67.0029 14.6389V14.6389ZM40.0042 2.82988L63.6198 15.7978L56.1703 19.8884L32.5548 6.92047L40.0042 2.82988ZM40.0042 28.7652L16.3887 15.7978L24.1113 11.5569L47.7273 24.5243L40.0042 28.7652ZM50.4737 23.0164L26.8581 10.049L29.8079 8.42895L53.424 21.3964L50.4737 23.0164ZM30.0326 37.6565C26.7099 34.3338 22.2924 32.5041 17.594 32.5041C16.7052 32.5041 15.8273 32.5697 14.9644 32.6983V18.0319L38.6868 31.0581V56.993L34.5694 54.7321C34.9748 53.2396 35.1844 51.6831 35.1844 50.0946C35.1844 45.3961 33.3547 40.9786 30.0326 37.6565V37.6565ZM54.806 29.6783L51.8009 31.3324V25.3041L54.806 23.6542V29.6783Z"
+                      fill="#70908B" />
+                    <path
+                      d="M66.3666 28.9449C66.019 28.9449 65.6777 29.0864 65.4319 29.3323C65.1861 29.5781 65.0446 29.9189 65.0446 30.267C65.0446 30.6145 65.1861 30.9554 65.4319 31.2012C65.6777 31.4475 66.019 31.5885 66.3666 31.5885C66.7142 31.5885 67.0555 31.4475 67.3013 31.2012C67.5471 30.9554 67.6886 30.6145 67.6886 30.267C67.6886 29.9189 67.5471 29.5781 67.3013 29.3323C67.0555 29.0864 66.7142 28.9449 66.3666 28.9449Z"
+                      fill="#70908B" />
+                    <path
+                      d="M13.1486 51.4166C13.4869 51.4166 13.8257 51.2875 14.0833 51.0298C14.5998 50.5134 14.5998 49.6763 14.0833 49.1599L13.1677 48.2437H20.9812C22.8765 48.2437 24.4185 49.7858 24.4185 51.6811C24.4185 53.5763 22.8765 55.1184 20.9812 55.1184H16.3515C15.6213 55.1184 15.0294 55.7102 15.0294 56.4404C15.0294 57.1701 15.6213 57.762 16.3515 57.762H20.9812C24.3344 57.762 27.0626 55.0342 27.0626 51.6811C27.0626 48.3279 24.3344 45.6002 20.9812 45.6002H13.1677L14.0833 44.684C14.5998 44.1676 14.5998 43.3305 14.0833 42.8141C13.5674 42.2981 12.7303 42.2981 12.2139 42.8141L9.04098 45.987C8.52508 46.5034 8.52508 47.3405 9.04098 47.8569L12.2139 51.0293C12.4721 51.2875 12.8104 51.4166 13.1486 51.4166V51.4166Z"
+                      fill="#70908B" />
+                    <path
+                      d="M6.09118 62.9224C5.71522 62.9224 5.34185 62.7623 5.08105 62.4519L5.07847 62.4488C4.60853 61.89 4.68083 61.0565 5.2396 60.5866C5.79837 60.1161 6.63239 60.1884 7.10234 60.7472C7.57177 61.3065 7.50102 62.1415 6.94225 62.6115C6.69385 62.8201 6.39174 62.9224 6.09118 62.9224Z"
+                      fill="#70908B" />
+                  </svg>
+                </span>
+              </div>
+              <h3
+                class="benefit-title mt-6 font-heading text-base font-bold text-primary md:text-lg">Return
+                policy</h3>
+              <p
+                class="benefit-text mt-3 max-w-[200px] text-[13px] leading-5 text-primary font-body">
+                You can return a product within 30 days.
+              </p>
+            </li>
+
+            <!-- Customer Support -->
+            <li
+              class="benefit-item group flex flex-col items-center text-center">
+              <div class="benefit-icon">
+                <span
+                  class="grid h-17 w-17 place-items-center rounded-xl bg-[#CAF3E5] transition duration-500 ease-out group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-primary/10">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="48"
+                    viewBox="0 0 60 68" fill="none">
+                    <path
+                      d="M29.8042 0C13.3702 0 0 13.3702 0 29.8042C0 31.6255 0 45.7141 0 45.9648C0 49.2516 2.67404 51.9256 5.96085 51.9256H8.28955C9.10976 54.2381 11.3183 55.8995 13.9086 55.8995C17.1955 55.8995 19.8695 53.2255 19.8695 49.9386V33.7781C19.8695 30.4913 17.1955 27.8173 13.9086 27.8173C11.3183 27.8173 9.10976 29.4786 8.28955 31.7912H5.96085C5.26422 31.7912 4.59581 31.9124 3.9739 32.1329V29.8042C3.9739 15.5614 15.5614 3.9739 29.8042 3.9739C44.0471 3.9739 55.6346 15.5614 55.6346 29.8042V32.1329C55.0126 31.9124 54.3442 31.7912 53.6476 31.7912H51.3189C50.4987 29.4786 48.2901 27.8173 45.6998 27.8173C42.413 27.8173 39.739 30.4913 39.739 33.7781V49.9386C39.739 53.2255 42.413 55.8995 45.6998 55.8995C46.3013 55.8995 46.8821 55.8092 47.4299 55.6427C46.6867 58.0882 44.4112 59.8734 41.7259 59.8734H35.4233C34.6031 57.5609 32.3946 55.8995 29.8042 55.8995C26.5174 55.8995 23.8434 58.5735 23.8434 61.8603C23.8434 65.1472 26.5174 67.8212 29.8042 67.8212C32.3946 67.8212 34.6031 66.1598 35.4233 63.8473H41.7259C47.2039 63.8473 51.6607 59.3906 51.6607 53.9125V51.9256H53.6476C56.9344 51.9256 59.6085 49.2516 59.6085 45.9648C59.6085 45.7178 59.6085 31.624 59.6085 29.8042C59.6085 13.3702 46.2383 0 29.8042 0ZM11.9217 33.7781C11.9217 32.6825 12.813 31.7912 13.9086 31.7912C15.0042 31.7912 15.8956 32.6825 15.8956 33.7781V49.9386C15.8956 51.0343 15.0042 51.9256 13.9086 51.9256C12.813 51.9256 11.9217 51.0343 11.9217 49.9386V33.7781ZM5.96085 35.7651H7.94779V47.9517H5.96085C4.86524 47.9517 3.9739 47.0604 3.9739 45.9648V37.752C3.9739 36.6564 4.86524 35.7651 5.96085 35.7651ZM29.8042 63.8473C28.7086 63.8473 27.8173 62.9559 27.8173 61.8603C27.8173 60.7647 28.7086 59.8734 29.8042 59.8734C30.8998 59.8734 31.7912 60.7647 31.7912 61.8603C31.7912 62.9559 30.8998 63.8473 29.8042 63.8473ZM47.6868 49.9386C47.6868 51.0343 46.7954 51.9256 45.6998 51.9256C44.6042 51.9256 43.7129 51.0343 43.7129 49.9386V33.7781C43.7129 32.6825 44.6042 31.7912 45.6998 31.7912C46.7954 31.7912 47.6868 32.6825 47.6868 33.7781V49.9386ZM55.6346 45.9648C55.6346 47.0604 54.7432 47.9517 53.6476 47.9517H51.6607V35.7651H53.6476C54.7432 35.7651 55.6346 36.6564 55.6346 37.752V45.9648Z"
+                      fill="#70908B" />
+                  </svg>
+                </span>
+              </div>
+              <h3
+                class="benefit-title mt-6 font-heading text-base font-bold text-primary md:text-lg">Customer
+                Support</h3>
+              <p
+                class="benefit-text mt-3 max-w-[200px] text-xs leading-5 text-primary font-body">
+                Our customer support is 24/7.
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials"
+        class="relative flex h-screen min-h-[640px] flex-col justify-center overflow-hidden bg-[#FFFDF9] py-10"
+        aria-labelledby="testimonials-title">
+
+        <!-- Header -->
+        <div id="testimonials-header" class="px-6 text-center">
+          <h2 id="testimonials-title"
+            class="font-heading text-3xl font-bold text-primary md:text-4xl">
+            Testimonials
+          </h2>
+          <p class="mt-2 text-sm text-primary md:text-base">Over 15,000 happy
+            customers.</p>
+        </div>
+
+        <!-- Decorative quotation mark -->
+        <svg viewBox="0 0 28 28" aria-hidden="true"
+          class="pointer-events-none absolute left-3 top-[30%] z-0 h-14 w-14 fill-[#E0EFF6] md:left-8 md:h-20 md:w-20">
+          <path
+            d="M9.6 6C5.4 7.8 3 11.4 3 16v8h9v-9H8c0-2.6 1-4.4 3-5.4L9.6 6zm12 0c-4.2 1.8-6.6 5.4-6.6 10v8h9v-9h-4c0-2.6 1-4.4 3-5.4L21.6 6z" />
+        </svg>
+
+        <!-- Horizontal track -->
+        <div id="testimonials-viewport" class="relative z-10 mt-8 md:mt-12">
+          <ul id="testimonials-track"
+            class="flex w-max gap-6 pl-[max(1.5rem,calc((100vw_-_1040px)/2))] pr-[max(1.5rem,calc((100vw_-_1040px)/2))] md:gap-10">
+
+            <!-- Card 1 -->
+            <li
+              class="testimonial-card flex w-[min(1040px,88vw)] shrink-0 flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white/60 sm:h-[340px] sm:flex-row">
+
+              <div
+                class="h-[220px] shrink-0 overflow-hidden bg-[#D9D9D9] sm:h-auto sm:w-[240px] md:w-[300px]">
+                <img src="src/assets/images/PP1.jpg" alt="Leona Paul"
+                  class="h-full w-full object-cover object-[center_15%]" />
+              </div>
+
+              <figure
+                class="flex flex-1 flex-col justify-center p-6 sm:px-8 md:px-14">
+                <blockquote
+                  class="text-base leading-8 text-primary md:text-xl md:leading-9">
+                  “My experience with Mark is a complete success, from customer
+                  service, wide range of products, clean store, purchasing
+                  experience, to the newsletter. Thank you.”
+                </blockquote>
+                <figcaption class="mt-8">
+                  <p class="text-xs font-bold text-primary">Leona Paul</p>
+                  <p class="text-xs text-primary/60">CEO of Floatcom</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- Card 2 -->
+            <li
+              class="testimonial-card flex w-[min(1040px,88vw)] shrink-0 flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white/60 sm:h-[340px] sm:flex-row">
+
+              <div
+                class="h-[220px] shrink-0 overflow-hidden bg-[#D9D9D9] sm:h-auto sm:w-[240px] md:w-[300px]">
+                <img src="src/assets/images/PERR2_2.jpg" alt="Daniel Carter"
+                  class="h-full w-full object-cover object-[center_15%]" />
+              </div>
+
+              <figure
+                class="flex flex-1 flex-col justify-center p-6 sm:px-8 md:px-14">
+                <blockquote
+                  class="text-base leading-8 text-primary md:text-xl md:leading-9">
+                  “The furniture arrived earlier than promised and the quality
+                  is outstanding. Every piece looks even better in person than
+                  it does online.”
+                </blockquote>
+                <figcaption class="mt-8">
+                  <p class="text-xs font-bold text-primary">Daniel Carter</p>
+                  <p class="text-xs text-primary/60">Interior Designer</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- Card 3 -->
+            <li
+              class="testimonial-card flex w-[min(1040px,88vw)] shrink-0 flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white/60 sm:h-[340px] sm:flex-row">
+
+              <div
+                class="h-[220px] shrink-0 overflow-hidden bg-[#D9D9D9] sm:h-auto sm:w-[240px] md:w-[300px]">
+                <img src="src/assets/images/PER3_3.jpg" alt="Sara Mitchell"
+                  class="h-full w-full object-cover object-[center_15%]" />
+              </div>
+
+              <figure
+                class="flex flex-1 flex-col justify-center p-6 sm:px-8 md:px-14">
+                <blockquote
+                  class="text-base leading-8 text-primary md:text-xl md:leading-9">
+                  “Their support team helped me pick the perfect dining set for
+                  our new home. Friendly, patient and genuinely knowledgeable.”
+                </blockquote>
+                <figcaption class="mt-8">
+                  <p class="text-xs font-bold text-primary">Sara Mitchell</p>
+                  <p class="text-xs text-primary/60">Homeowner</p>
+                </figcaption>
+              </figure>
+            </li>
+
+            <!-- Card 4 -->
+            <li
+              class="testimonial-card flex w-[min(1040px,88vw)] shrink-0 flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white/60 sm:h-[340px] sm:flex-row">
+
+              <div
+                class="h-[220px] shrink-0 overflow-hidden bg-[#D9D9D9] sm:h-auto sm:w-[240px] md:w-[300px]">
+                <img src="src/assets/images/PER4_4.jpg" alt="Omar Haddad"
+                  class="h-full w-full object-cover object-[center_15%]" />
+              </div>
+
+              <figure
+                class="flex flex-1 flex-col justify-center p-6 sm:px-8 md:px-14">
+                <blockquote
+                  class="text-base leading-8 text-primary md:text-xl md:leading-9">
+                  “We furnished our whole office from INWOOD. Easy ordering,
+                  fair prices, and the return policy gave us real peace of
+                  mind.”
+                </blockquote>
+                <figcaption class="mt-8">
+                  <p class="text-xs font-bold text-primary">Omar Haddad</p>
+                  <p class="text-xs text-primary/60">Operations Manager at
+                    Nexa</p>
+                </figcaption>
+              </figure>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Prev / Next -->
+        <div id="testimonials-arrows"
+          class="absolute right-3 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-2 md:right-5">
+          <button id="testimonials-prev" type="button"
+            aria-label="Previous testimonial"
+            class="grid h-7 w-7 place-items-center rounded-full bg-[#E0EFF6] text-primary transition hover:scale-110 disabled:cursor-default disabled:opacity-40 disabled:hover:scale-100">
+            <svg viewBox="0 0 24 24"
+              class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>
+          </button>
+          <button id="testimonials-next" type="button"
+            aria-label="Next testimonial"
+            class="grid h-7 w-7 place-items-center rounded-full bg-[#F8D8D8] text-primary transition hover:scale-110 disabled:cursor-default disabled:opacity-40 disabled:hover:scale-100">
+            <svg viewBox="0 0 24 24"
+              class="h-3.5 w-3.5 fill-none stroke-current" stroke-width="2.4"
+              stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>
+          </button>
+        </div>
+
+        <!-- Progress + See all -->
+        <div
+          class="relative z-10 mx-auto mt-8 flex w-full max-w-[1040px] items-center gap-5 px-6 md:mt-12">
+          <span id="testimonials-count"
+            class="w-14 shrink-0 text-xs tabular-nums text-primary/70">01 /
+            04</span>
+
+          <div class="relative h-[2px] flex-1 rounded-full bg-primary/15">
+            <div id="testimonials-progress"
+              class="absolute left-0 top-[-0.5px] h-[3px] w-full origin-left rounded-full bg-primary"></div>
+          </div>
+
+          <a href="#reviews"
+            class="group inline-flex shrink-0 items-center gap-1.5 text-[11px] font-semibold text-primary">
+            See all review
+            <svg viewBox="0 0 24 24"
+              class="h-3.5 w-3.5 fill-none stroke-current transition-transform duration-300 group-hover:translate-x-1"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6" /></svg>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- Newsletter Section -->
+      <section id="newsletter" class="overflow-hidden bg-[#FFFDF9]"
+        aria-labelledby="newsletter-title">
+        <div class="grid md:grid-cols-2">
+
+          <!-- Image -->
+          <div id="newsletter-image"
+            class="relative h-[260px] overflow-hidden bg-[#D9D9D9] md:h-auto md:min-h-[360px]">
+            <img src="src/assets/images/Img1_2.png" alt loading="lazy"
+              class="newsletter-img absolute inset-0 h-[120%] w-full -translate-y-[8%] object-cover" />
+          </div>
+
+          <!-- Content -->
+          <div
+            class="flex items-center bg-[#DFF5EF] px-6 py-14 md:px-16 lg:px-20">
+            <div class="w-full max-w-md">
+
+              <h2 id="newsletter-title"
+                class="newsletter-item font-heading text-3xl leading-tight text-primary md:text-4xl">
+                <span class="block font-normal tracking-wide">Join Our</span>
+                <span class="block font-bold">Newsletter</span>
+              </h2>
+
+              <p class="newsletter-item mt-4 text-xs text-primary md:text-sm">
+                Receive exclusive deals, discounts and many offers.
+              </p>
+
+              <form id="newsletter-form" novalidate class="mt-8">
+                <label for="newsletter-email" class="sr-only">Email
+                  address</label>
+
+                <div class="newsletter-item relative">
+                  <input id="newsletter-email" name="email" type="email"
+                    autocomplete="email"
+                    placeholder="Enter your email"
+                    aria-describedby="newsletter-message"
+                    class="peer w-full border-b border-primary/25 bg-transparent px-1 pb-3 pt-2 text-sm text-primary outline-none transition-colors duration-300 placeholder:text-primary/40 focus:border-primary aria-[invalid=true]:border-rose-400" />
+                  <span
+                    class="pointer-events-none absolute bottom-0 left-0 h-px w-full origin-left scale-x-0 bg-primary transition-transform duration-500 peer-focus:scale-x-100"></span>
+                </div>
+
+                <p id="newsletter-message" role="status" aria-live="polite"
+                  class="mt-3 min-h-[1.25rem] text-xs text-primary/70 transition-colors"></p>
+
+                <button id="newsletter-submit" type="submit"
+                  class="newsletter-item mt-4 inline-flex min-w-[120px] items-center justify-center gap-2 rounded-md bg-[#6B8F89] px-7 py-3 text-xs font-semibold text-white transition duration-300 hover:bg-primary active:scale-95 disabled:cursor-wait disabled:opacity-70">
+                  <span id="newsletter-submit-label">Subscribe</span>
+                </button>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="bg-[#F4F6F6] px-6 pb-8 pt-14 md:pt-16"
+        aria-labelledby="footer-title">
+        <h2 id="footer-title" class="sr-only">INWOOD footer</h2>
+
+        <div class="mx-auto max-w-6xl">
+
+          <div
+            class="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-[1.6fr_1fr_1fr_1fr_1.2fr] md:gap-x-10">
+
+            <!-- Brand -->
+            <div class="footer-col col-span-2 md:col-span-1">
+              <a href="#" class="inline-flex items-center gap-2 text-primary"
+                aria-label="INWOOD home">
+                <img src="src/assets/images/Logo.png" alt class="h-11">
+              </a>
+
+              <!-- Social -->
+              <ul class="mt-6 flex items-center gap-5 text-primary">
+                <li>
+                  <a
+                    href="https://www.facebook.com/aya.mohammed.718801/?locale=ar_AR"
+                    aria-label="Facebook" target="_blank"
+                    class="block transition duration-300 hover:-translate-y-1 hover:text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      height="28" viewBox="0 0 27 28" fill="none">
+                      <path
+                        d="M27 3.11111V24.8889C27 26.6071 25.6569 28 24 28H18.375C17.9608 28 17.625 27.6518 17.625 27.2222V17.8889H21.135C21.4915 17.889 21.7987 17.6289 21.87 17.2667L22.41 14.4667C22.4323 14.3536 22.405 14.236 22.3354 14.1459C22.2659 14.0557 22.1613 14.0023 22.05 14H17.625V8.94444C17.625 8.72967 17.7929 8.55556 18 8.55556H21.75C22.1642 8.55556 22.5 8.20733 22.5 7.77778V5.44444C22.5 5.01489 22.1642 4.66667 21.75 4.66667H18C15.5147 4.66667 13.5 6.756 13.5 9.33333V14H11.655C11.2408 14 10.905 14.3482 10.905 14.7778V17.1111C10.905 17.5407 11.2408 17.8889 11.655 17.8889H13.5V27.2222C13.5 27.6518 13.1642 28 12.75 28H3C1.34315 28 0 26.6071 0 24.8889V3.11111C0 1.39289 1.34315 0 3 0H24C25.6569 0 27 1.39289 27 3.11111Z"
+                        fill="#07484A" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/aya6moh12/?hl=ar"
+                    aria-label="Instagram" target="_blank"
+                    class="block transition duration-300 hover:-translate-y-1 hover:text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21"
+                      height="27" viewBox="0 0 27 27" fill="none">
+                      <path
+                        d="M19.5 0H7.5C3.35786 0 0 3.35786 0 7.5V19.5C0 23.6421 3.35786 27 7.5 27H19.5C23.6421 27 27 23.6421 27 19.5V7.5C27 3.35786 23.6421 0 19.5 0ZM24.375 19.5C24.3667 22.189 22.189 24.3668 19.5 24.375H7.49999C4.81102 24.3668 2.63322 22.189 2.62499 19.5V7.5C2.63322 4.81103 4.81102 2.63324 7.49999 2.625H19.5C22.189 2.63324 24.3667 4.81103 24.375 7.5V19.5ZM20.625 7.875C21.4534 7.875 22.125 7.20342 22.125 6.375C22.125 5.54657 21.4534 4.875 20.625 4.875C19.7966 4.875 19.125 5.54657 19.125 6.375C19.125 7.20342 19.7966 7.875 20.625 7.875ZM13.5 6.75001C9.77209 6.75001 6.75001 9.77209 6.75001 13.5C6.75001 17.2279 9.77209 20.25 13.5 20.25C17.2279 20.25 20.25 17.2279 20.25 13.5C20.254 11.7086 19.5441 9.98937 18.2774 8.72263C17.0107 7.4559 15.2914 6.74602 13.5 6.75001ZM9.375 13.5C9.375 15.7782 11.2218 17.625 13.5 17.625C15.7782 17.625 17.625 15.7782 17.625 13.5C17.625 11.2218 15.7782 9.375 13.5 9.375C11.2218 9.375 9.375 11.2218 9.375 13.5Z"
+                        fill-rule="evenodd" clip-rule="evenodd"
+                        fill="#07484A" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/aya-abu-eliewa-a765493aa/"
+                    target="_blank"
+                    aria-label="LinkedIn"
+                    class="block transition duration-300 hover:-translate-y-1 hover:text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21"
+                      height="27" viewBox="0 0 28 27" fill="none">
+                      <path
+                        d="M3.11111 0H24.8889C26.6071 0 28 1.34315 28 3V24C28 25.6569 26.6071 27 24.8889 27H3.11111C1.39289 27 0 25.6569 0 24V3C0 1.34315 1.39289 0 3.11111 0ZM7.77777 22.5C8.20732 22.5 8.55554 22.1642 8.55554 21.75V11.25C8.55554 10.8358 8.20732 10.5 7.77777 10.5H5.44443C5.01488 10.5 4.66666 10.8358 4.66666 11.25V21.75C4.66666 22.1642 5.01488 22.5 5.44443 22.5H7.77777ZM6.61113 9C5.32247 9 4.2778 7.99264 4.2778 6.75C4.2778 5.50736 5.32247 4.5 6.61113 4.5C7.8998 4.5 8.94446 5.50736 8.94446 6.75C8.94446 7.99264 7.8998 9 6.61113 9ZM22.5556 22.5001C22.9851 22.5001 23.3333 22.1643 23.3333 21.7501V14.8501C23.3838 12.4662 21.5563 10.4318 19.1022 10.1401C17.3865 9.98892 15.724 10.7617 14.7778 12.1501V11.2501C14.7778 10.8358 14.4296 10.5001 14 10.5001H11.6667C11.2371 10.5001 10.8889 10.8358 10.8889 11.2501V21.7501C10.8889 22.1643 11.2371 22.5001 11.6667 22.5001H14C14.4296 22.5001 14.7778 22.1643 14.7778 21.7501V16.1251C14.7778 14.8824 15.8225 13.8751 17.1111 13.8751C18.3998 13.8751 19.4445 14.8824 19.4445 16.1251V21.7501C19.4445 22.1643 19.7927 22.5001 20.2222 22.5001H22.5556Z"
+                        fill-rule="evenodd" clip-rule="evenodd"
+                        fill="#07484A" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Dribbble"
+                    class="block transition duration-300 hover:-translate-y-1 hover:text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22"
+                      height="30" viewBox="0 0 30 30" fill="none">
+                      <path
+                        d="M15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30C23.2843 30 30 23.2843 30 15C30 11.0218 28.4196 7.20644 25.6066 4.3934C22.7936 1.58035 18.9782 0 15 0ZM27.0001 15.0002C25.2823 14.4844 23.4986 14.2216 21.7051 14.2202C20.6381 14.2344 19.5742 14.3398 18.5251 14.5352C18.1501 13.6202 17.7601 12.7352 17.3401 11.8502C19.8069 10.6176 22.0564 8.99131 24.0001 7.03516C25.947 9.23002 27.0153 12.0663 27.0001 15.0002ZM16.3051 9.87C18.5308 8.75354 20.5578 7.27889 22.3051 5.505C20.2127 3.88789 17.6446 3.00727 15.0001 3C14.0292 3.00392 13.0622 3.12479 12.1201 3.36C13.6847 5.41621 15.084 7.59301 16.3051 9.87ZM9.92995 4.14001C11.5557 6.23702 13.0056 8.46457 14.2649 10.8C11.6303 11.8289 8.82837 12.3628 5.99995 12.375C5.11271 12.3653 4.22656 12.3103 3.34495 12.21C4.19726 8.65797 6.62108 5.68755 9.92995 4.14001ZM2.99999 14.4301V15.0001C3.00694 17.9598 4.10743 20.8125 6.08999 23.0101C8.424 19.2144 12.0607 16.3989 16.32 15.0901C16.005 14.3101 15.645 13.5601 15.285 12.8102L15.285 12.8101L15.285 12.8101L15.285 12.8101C12.3336 14 9.18225 14.616 5.99999 14.6251C4.99694 14.6216 3.99505 14.5565 2.99999 14.4301ZM7.77027 24.5549C9.82781 20.9944 13.1724 18.3584 17.1153 17.1899C18.17 20.1044 18.919 23.1206 19.3503 26.1899C15.473 27.7153 11.0801 27.1008 7.77027 24.5699V24.5549ZM19.3352 16.68C20.2925 19.4165 21.0053 22.2326 21.4652 25.095C24.2194 23.3361 26.137 20.53 26.7752 17.325C25.1403 16.7804 23.4285 16.5018 21.7052 16.5C20.9121 16.5072 20.1203 16.5673 19.3352 16.68Z"
+                        fill-rule="evenodd" clip-rule="evenodd"
+                        fill="#07484A" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Twitter"
+                    class="block transition duration-300 hover:-translate-y-1 hover:text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22"
+                      height="27" viewBox="0 0 30 27" fill="none">
+                      <path
+                        d="M29.9561 3.91307C29.1821 5.00633 28.2464 5.95999 27.1853 6.73722C27.1853 7.02281 27.1853 7.30839 27.1853 7.60985C27.1938 12.7961 25.2373 17.769 21.7544 21.4138C18.2715 25.0586 13.5535 27.0704 8.65817 26.9981C5.82807 27.0081 3.03421 26.3239 0.495452 24.999C0.358562 24.9357 0.27027 24.7923 0.27079 24.6341V24.4596C0.27079 24.2317 0.445137 24.047 0.660204 24.047C3.44212 23.95 6.1248 22.9287 8.32867 21.1277C5.81064 21.074 3.54507 19.4946 2.50243 17.066C2.44977 16.9333 2.46617 16.7812 2.5457 16.6645C2.62524 16.5479 2.75642 16.4836 2.89185 16.4948C3.65713 16.5763 4.43006 16.5009 5.16842 16.2727C2.38873 15.6617 0.300111 13.2183 0.00119572 10.2277C-0.00942813 10.0843 0.0512914 9.94532 0.161419 9.86106C0.271546 9.77681 0.415162 9.75943 0.540384 9.81522C1.28633 10.1637 2.09158 10.3473 2.90682 10.3547C0.47116 8.66198 -0.580886 5.44244 0.345677 2.51686C0.441321 2.23258 0.671103 2.02257 0.950584 1.964C1.23006 1.90544 1.51802 2.00697 1.70863 2.23127C4.9954 5.93516 9.51149 8.14228 14.3047 8.38728C14.1819 7.86855 14.1215 7.33546 14.1249 6.80068C14.1698 3.99657 15.8084 1.49861 18.2737 0.476249C20.739 -0.546108 23.543 0.109473 25.373 2.13607C26.6205 1.88445 27.8265 1.44079 28.9526 0.819194C29.0351 0.764662 29.1397 0.764662 29.2222 0.819194C29.2737 0.906581 29.2737 1.0174 29.2222 1.10478C28.6768 2.42738 27.7552 3.53668 26.5862 4.27799C27.6099 4.15229 28.6156 3.89659 29.5817 3.51642C29.663 3.45779 29.7699 3.45779 29.8513 3.51642C29.9194 3.54943 29.9704 3.61255 29.9906 3.68898C30.0108 3.7654 29.9982 3.84738 29.9561 3.91307Z"
+                        fill="#07484A" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- Address -->
+              <address class="mt-6 not-italic text-sm leading-7 text-primary">
+                <p class="font-bold">Address</p>
+                <a href="tel:+123654987"
+                  class="block transition-colors hover:text-secondary">+123 654
+                  987</a>
+                <p>877 The Bronx, NY</p>
+                <p>14568, USA</p>
+              </address>
+            </div>
+
+            <!-- My Account -->
+            <nav class="footer-col" aria-label="My Account">
+              <h3 class="text-sm font-bold text-primary">My Account</h3>
+              <ul class="mt-5 space-y-3 text-sm text-primary">
+                <li><a href="#" class="footer-link">Sign in</a></li>
+                <li><a href="#" class="footer-link">Register</a></li>
+                <li><a href="#" class="footer-link">Order status</a></li>
+              </ul>
+            </nav>
+
+            <!-- Help -->
+            <nav class="footer-col" aria-label="Help">
+              <h3 class="text-sm font-bold text-primary">Help</h3>
+              <ul class="mt-5 space-y-3 text-sm text-primary">
+                <li><a href="#" class="footer-link">Shipping</a></li>
+                <li><a href="#" class="footer-link">Returns</a></li>
+                <li><a href="#" class="footer-link">Sizing</a></li>
+              </ul>
+            </nav>
+
+            <!-- Shop -->
+            <nav class="footer-col" aria-label="Shop">
+              <h3 class="text-sm font-bold text-primary">Shop</h3>
+              <ul class="mt-5 space-y-3 text-sm text-primary">
+                <li><a href="#products" class="footer-link">All
+                    Products</a></li>
+                <li><a href="#bedroom" class="footer-link">Bedroom</a></li>
+                <li><a href="#dining-room" class="footer-link">Dining
+                    Room</a></li>
+              </ul>
+            </nav>
+
+            <!-- Legal -->
+            <nav class="footer-col" aria-label="Legal">
+              <h3 class="text-sm font-bold text-primary">Legal Stuff</h3>
+              <ul class="mt-5 space-y-3 text-sm text-primary">
+                <li><a href="#" class="footer-link">Shipping &amp;
+                    Delivery</a></li>
+                <li><a href="#" class="footer-link">Terms &amp;
+                    Conditions</a></li>
+                <li><a href="#" class="footer-link">Privacy &amp;
+                    Policy</a></li>
+              </ul>
+            </nav>
+
+          </div>
+
+          <!-- Bottom bar -->
+          <div
+            class="footer-bottom mt-14 flex flex-col items-start justify-between gap-4 border-t border-primary/10 pt-6 sm:flex-row sm:items-center">
+            <p class="text-xs text-primary">
+              Copyright ©<span id="footer-year">2020</span> INWOOD. All Rights
+              Reserved.
+            </p>
+
+            <button id="back-to-top" type="button"
+              class="group inline-flex items-center gap-2 text-xs font-semibold text-primary transition-colors hover:text-secondary">
+              Back to top
+              <span
+                class="grid h-7 w-7 place-items-center rounded-full bg-[#E0EFF6] transition duration-300 group-hover:-translate-y-1">
+                <svg viewBox="0 0 24 24"
+                  class="h-3.5 w-3.5 fill-none stroke-current"
+                  stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true"><path
+                    d="M5 15l7-7 7 7" /></svg>
+              </span>
+            </button>
+          </div>
+
+        </div>
+      </footer>
+
+    </main>
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>
